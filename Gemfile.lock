@@ -47,6 +47,12 @@ GEM
     compass-rails (2.0.alpha.0)
       compass (>= 0.12.2, < 0.14)
     dalli (2.6.4)
+    devise (3.2.1)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -96,6 +102,7 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.2)
+    orm_adapter (0.5.0)
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.4)
@@ -185,6 +192,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -194,6 +203,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0.alpha.0)
   dalli
+  devise
   factory_girl_rails
   fuubar
   growl
