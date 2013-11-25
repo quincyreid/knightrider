@@ -20,6 +20,7 @@ group :development do
   gem 'growl'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
 end
 
 group :test do
@@ -27,6 +28,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'fuubar'
   gem 'rake'
+  gem 'cucumber-rails', '~> 1.4', require: false
+  gem 'database_cleaner'
 end
 
 # Heroku
