@@ -16,6 +16,7 @@ gem "compass-rails", "~> 2.0.alpha.0"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'omniauth-github'
+gem 'settingslogic'
 
 group :development do
   gem 'growl'
@@ -27,10 +28,14 @@ end
 group :test do
   gem 'rspec-rails', '~> 2.10'
   gem 'factory_girl_rails'
-  gem 'fuubar'
   gem 'rake'
   gem 'cucumber-rails', '~> 1.4', require: false
   gem 'database_cleaner'
+end
+
+gem :development, :test do
+  gem 'fuubar' #rspec formatter
+
 end
 
 # Heroku

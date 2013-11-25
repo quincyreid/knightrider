@@ -1,0 +1,18 @@
+# config/application.yml
+defaults: &defaults
+  app_name: "KnightRider"
+
+development:
+  <<: *defaults
+  github_client_id: "f23d60246981c938460e"
+  github_client_secret: "0bb83d96f948e527c4a49f8f4d0906c69bd315fb"
+
+
+test:
+  <<: *defaults
+  github_client_id: "f23d60246981c938460e"
+  github_client_secret: "0bb83d96f948e527c4a49f8f4d0906c69bd315fb"
+
+
+production:
+  <<: *defaults

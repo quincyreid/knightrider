@@ -79,6 +79,8 @@ GEM
     factory_girl_rails (4.3.0)
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     ffi (1.9.3)
     formatador (0.2.4)
     fssm (0.2.10)
@@ -98,7 +100,9 @@ GEM
     guard-rspec (4.0.4)
       guard (>= 2.1.1)
       rspec (~> 2.14)
+    hashie (2.0.5)
     hike (1.2.3)
+    httpauth (0.2.0)
     i18n (0.6.5)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
@@ -107,6 +111,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
     kgio (2.8.1)
     libv8 (3.16.14.3)
     listen (2.2.0)
@@ -124,8 +130,24 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_test (0.0.2)
+    multipart-post (1.2.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-github (1.1.1)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.17.0)
     polyglot (0.3.3)
@@ -187,6 +209,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    settingslogic (2.0.9)
     slop (3.4.7)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -241,6 +264,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   memcachier
+  omniauth-github
   pg
   rails (= 4.0.0)
   rails_12factor
@@ -248,6 +272,7 @@ DEPENDENCIES
   rspec-rails (~> 2.10)
   sass-rails (~> 4.0.0)
   sdoc
+  settingslogic
   terminal-notifier-guard
   therubyracer
   uglifier (>= 1.3.0)
