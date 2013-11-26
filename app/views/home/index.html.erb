@@ -6,7 +6,13 @@
   <div class="bottom-background"></div>
 </section>
 
-<%= link_to 'Sign in with Github', user_omniauth_authorize_path(:github) %>
+<% unless user_signed_in? %>
+  <%= link_to 'Sign in with Github', user_omniauth_authorize_path(:github) %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% end %>
 
 <section class="section clearfix">
   <%= render 'shared/robots' %>
