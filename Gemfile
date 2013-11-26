@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '4.0.0'
 
 gem 'pg'
@@ -33,9 +35,8 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem :development, :test do
+group :development, :test do
   gem 'fuubar' #rspec formatter
-
 end
 
 # Heroku
