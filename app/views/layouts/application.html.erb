@@ -2,13 +2,38 @@
 <html>
 <head>
   <title>Knightrider</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<header class="page-head clearfix">
+  <div class="container">
+    <%= image_tag asset_path("knightrider-small-logo.png"), class: 'left' %>
+    <nav class="page-nav right">
+      <ul>
+        <li class="menu-item"><%= link_to "Blah", "#" %></li>
+        <li class="menu-item"><%= link_to "Blah", "#" %></li>
+        <li class="menu-item"><%= link_to "Blah", "#" %></li>
+        <li class="menu-item"><%= link_to "Blah", "#" %></li>
+      </ul>
+      <%= link_to "Submit A Robot", "#", class: 'btn submit-robot' %>
+    </nav>
+  </div>
+</header>
 <%= yield %>
+
+<footer class="page-footer">
+  <div class="copyright">
+    <p class="smallprint">&copy; 2013 Copyright Instructobots <span class="space">::</span>  Made with <span class="heart">&#x2665;</span> in NYC by
+    <%= link_to "Francis Gulotta", "#", class: "footer-link" %>
+    &&
+    <%= link_to "Rushaine McBean", "#", class: "footer-link" %>
+    &&
+    <%= link_to "Zahra Jabini", "#", class: "footer-link" %>
+  </div>
+</footer>
 
 </body>
 </html>

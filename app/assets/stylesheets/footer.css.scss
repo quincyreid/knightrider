@@ -1,0 +1,18 @@
+@import "baseline";
+
+.page-footer {
+  background: $dark-gray;
+  text-align: center;
+  color: white;
+  padding: 2.22222rem 0;
+  .section-head-title {
+    color: white;
+  }
+  .footer-link {
+    font-weight: bold;
+    color: $light-gray;
+    &:hover {
+      color: white;
+    }
+  }
+}
