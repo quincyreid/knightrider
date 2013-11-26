@@ -25,6 +25,7 @@ group :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
+  gem 'foreman'
 end
 
 group :test do
