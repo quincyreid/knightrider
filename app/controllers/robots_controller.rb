@@ -1,5 +1,5 @@
 class RobotsController < ApplicationController
-  before_filter :authenticate_user!, only: [:new, :create]
+  before_filter :authenticate_user!, expect: [:index, :show]
 
   def index
     @robots = Robot.all
