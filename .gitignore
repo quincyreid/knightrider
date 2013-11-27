@@ -18,3 +18,25 @@
 config/database.yml
 .rspec
 .DS_Store
+
+#Keys for 3rd services
+.env
+
+# Rails
+
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+/vendor/bundle
+/log/*
+/tmp/*
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
+coverage
+public/assets/*
+.#*

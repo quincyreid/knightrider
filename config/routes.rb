@@ -5,6 +5,13 @@ Knightrider::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  devise_for :users,
+    :path_names => { :sign_in => 'login', :sign_out => 'logout'},
+    :controllers => {
+      :omniauth_callbacks => "users/omniauth_callbacks",
+      :sessions => "sessions"
+    }
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

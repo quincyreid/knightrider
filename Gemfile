@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '4.0.0'
 
 gem 'pg'
@@ -14,18 +16,28 @@ gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
+gem 'omniauth-github'
+gem 'settingslogic'
 
 group :development do
   gem 'growl'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
+  gem 'foreman'
 end
 
 group :test do
   gem 'rspec-rails', '~> 2.10'
   gem 'factory_girl_rails'
-  gem 'fuubar'
   gem 'rake'
+  gem 'cucumber-rails', '~> 1.4', require: false
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'fuubar' #rspec formatter
 end
 
 # Heroku
