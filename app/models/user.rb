@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github]
 
+  has_many :robots
   def self.find_or_create_github_auth(auth_hash)
 
     user = where(email: auth_hash[:info][:email]).first_or_create! do |u|
