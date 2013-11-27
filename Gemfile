@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'omniauth-github'
 gem 'settingslogic'
+gem 'simple_form'
 
 group :development do
   gem 'growl'
@@ -32,6 +33,7 @@ group :test do
   gem 'rspec-rails', '~> 2.10'
   gem 'factory_girl_rails'
   gem 'rake'
+  gem "capybara", "~> 2.2.0"
   gem 'cucumber-rails', '~> 1.4', require: false
   gem 'database_cleaner'
 end
