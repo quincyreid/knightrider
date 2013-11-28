@@ -1,5 +1,40 @@
 @import "baseline";
 
+.hero-case-study {
+  overflow: hidden;
+  .hero-case-study-contained {
+    background-color: $light-gray;
+    text-align: center;
+    .hero-case-study-image {
+      padding-top: 3.33333rem;
+    }
+  }
+}
+
+.case-study-copy {
+  margin-left: 25.72674%;
+  display: block;
+  float: left;
+  margin-right: 2.90698%;
+  width: 48.54651%;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+  text-align: center;
+  p:last-of-type {
+    margin-bottom: 2.77778rem;
+  }
+}
+
+.case-study-title {
+  margin-bottom: 3.33333rem;
+  font-family: adelle, Georgia, serif;
+}
+
+.case-parts {
+  width: 30%;
+  background-image: image-url("parts.png") no-repeat;
+x  height: 30px;
+}
+
 .robots {
   //max-height: 17.22222rem;
   display: block;
