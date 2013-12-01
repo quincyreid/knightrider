@@ -24,6 +24,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   config.include(FactoryGirl::Syntax::Methods)
+  config.extend(PaperclipMacros)
   config.include Devise::TestHelpers, :type => :helper
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
