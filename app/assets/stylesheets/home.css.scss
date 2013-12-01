@@ -27,6 +27,31 @@ header {
   margin-top :60px;
 }
 
+.feature {
+  text-align: center;
+  margin: 4% 1%;
+  display: block;
+  float: left;
+  width: 31.33%;
+}
+
+.feature-img {
+  max-width: 100%;
+  margin-bottom: 1.25em;
+}
+
+.feature-title {
+  margin: 4% 0;
+  font-family: proxima-nova,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.44444rem;
+}
+
+.feature-text {
+  color: $light-gray;
+  line-height: 1.4;
+}
+
 .headline {
   text-shadow: 0.04em 0.04em $dark-gray;
   font-size: 60px;
@@ -38,5 +63,6 @@ header {
 .second-headline {
   font-size: 40px;
   color: white;
-  margin-top: -20px;
+  margin-top: -25px;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
 }
