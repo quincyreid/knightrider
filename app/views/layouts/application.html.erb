@@ -10,7 +10,7 @@
 
 <header class="page-head clearfix">
   <div class="container">
-    <%= image_tag asset_path("knightrider-small-logo.png"), class: 'left' %>
+    <%= image_tag asset_path("knightrider-half.png"), class: 'left' %>
     <nav class="page-nav right">
       <ul>
         <li class="menu-item"><%= link_to "Blah", "#" %></li>
@@ -18,7 +18,14 @@
         <li class="menu-item"><%= link_to "Blah", "#" %></li>
         <li class="menu-item"><%= link_to "Blah", "#" %></li>
       </ul>
-      <%= link_to "Submit A Robot", "#", class: 'btn submit-robot' %>
+      <% unless user_signed_in? %>
+        <%= link_to 'Submit A Robot', user_omniauth_authorize_path(:github), class: 'btn submit-robot' %>
+      <% end %>
+
+      <% if user_signed_in? %>
+        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn submit-robot' %>
+      <% end %>
+      <!%= link_to "Submit A Robot", "#", class: 'btn submit-robot' %>
     </nav>
   </div>
 </header>
