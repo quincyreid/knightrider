@@ -14,12 +14,12 @@ gem 'jbuilder', '~> 1.2'
 gem 'dalli'
 gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
-
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'omniauth-github'
 gem 'settingslogic'
 gem 'simple_form'
+gem 'paperclip', '~> 3.0'
 
 group :development do
   gem 'growl'
