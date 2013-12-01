@@ -14,12 +14,12 @@ gem 'jbuilder', '~> 1.2'
 gem 'dalli'
 gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
-
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'omniauth-github'
 gem 'settingslogic'
 gem 'simple_form'
+gem 'paperclip', '~> 3.0'
 
 group :development do
   gem 'growl'
@@ -30,8 +30,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 2.10'
-  gem 'factory_girl_rails'
   gem 'rake'
   gem "capybara", "~> 2.2.0"
   gem 'cucumber-rails', '~> 1.4', require: false
@@ -40,7 +38,11 @@ end
 
 group :development, :test do
   gem 'fuubar' #rspec formatter
+  gem 'rspec-rails', '~> 2.10'
+  gem 'factory_girl_rails'
 end
+
+
 
 # Heroku
 group :production do

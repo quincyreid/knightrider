@@ -19,7 +19,7 @@ config/database.yml
 .rspec
 .DS_Store
 
-#Keys for 3rd services
+#Keys for 3rd-party services
 .env
 
 # Rails

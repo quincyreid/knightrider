@@ -39,9 +39,9 @@ class RobotsController < ApplicationController
 
     respond_to do |format|
       if @robot.update_attributes(robot_params)
-        format.html { robot_path(@robot) }
+        format.html { redirect_to robot_path(@robot) }
       else
-        format.html { render edit_robot_path(@robot) }
+        format.html { redirect_to edit_robot_path(@robot) }
       end
     end
   end
@@ -49,7 +49,7 @@ class RobotsController < ApplicationController
 
   private
   def robot_params
-    params.require(:robot).permit(:name, :description)
+    params.require(:robot).permit(:name, :description, :avatar)
   end
 
 end
