@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe RobotsController do
+  stub_paperclip(Robot)
 
   describe "GET 'index'" do
     it "returns 200 success" do
