@@ -1,5 +1,9 @@
 @import "baseline";
 
+header {
+  img { width: 70px; }
+}
+
 .hero-image-text {
   width: 100%;
   text-align: center;
@@ -16,9 +20,23 @@
 .bottom-background {
   width: 100%;
   background-color: $blue;
-  height: 150px;
+  height: 180px;
 }
 
 .knightrider-logo {
   margin-top :60px;
+}
+
+.headline {
+  text-shadow: 0.04em 0.04em $dark-gray;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: $yellow;
+  margin-top: -15px;
+}
+
+.second-headline {
+  font-size: 40px;
+  color: white;
+  margin-top: -20px;
 }

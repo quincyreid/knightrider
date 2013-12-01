@@ -37,6 +37,15 @@ strong {
   font-weight: 700;
 }
 
+// Clear form element styling on iOS
+input,
+select,
+button,
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius:0;
+}
+
 .container {
   max-width: 1400px;
   margin-left: auto;
@@ -76,9 +85,24 @@ strong {
   color: white;
 }
 
+.btn-submit {
+  background: $dark-gray;
+  border-color: $dark-gray;
+  color: white;
+  float: right;
+  &:hover {
+    color: $dark-gray;
+    background-color: white;
+  }
+}
+
 .section {
   padding: 60px 0;
   padding: 3.66667rem 0;
+}
+
+.section-head {
+  padding: 0 0 30px 0;
 }
 
 .section-head-title {
@@ -86,12 +110,46 @@ strong {
   font-size: 1.44444rem;
   line-height: 1.07692;
   padding: 0 0 80px;
-  padding: 0 0 4.44444rem;
+  padding: 0 0 0.44444rem;
   text-align: center;
   font-family: proxima-nova,Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: $dark-gray;
+}
+
+form {
+  color: $light-gray;
+  display: block;
+  float: left;
+  margin: 0 3% 3% 9%;
+  width: 48.54651%;
+  label {
+    display: block;
+    float: left;
+    margin-right: 6%;
+    width: 30%;
+    line-height: 60px;
+  }
+  .form-row { margin: 20px 0; }
+  input,
+  textarea {
+    background: white;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    -webkit-appearance: none;
+    border: none;
+    border: 1px solid $light-gray;
+    height: 60px;
+    width: 63%;
+    font-size: 16px;
+    text-align: left;
+    color: $light-gray;
+  }
+  textarea {
+    height: 200px;
+    padding-top: 15px;
+  }
 }
 
 .heart {

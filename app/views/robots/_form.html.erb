@@ -1,9 +1,22 @@
-<%= simple_form_for @robot do |f| %>
-
-    <%= f.input :name, placeholder: 'Name' %>
-
-
-    <%= f.text_field :description, placeholder: 'Description' %>
-
-  <%= f.button :submit %>
-<% end %>
+<section class="section">
+  <div class="container">
+    <div class="section-head clearfix">
+      <h1 class="section-head-title">Your Robot</h1>
+      <p class="section-head-content">The first step is to introduce the world to your robot.</p>
+    </div>
+    <div class="form-section clearfix">
+      <div class="section-number">&.</div>
+      <%= form_for @robot do |f| %>
+        <div class="form-row">
+          <%= f.label "Robot Name*" %>
+          <%= f.text_field :name, placeholder: 'Have you named your robot?', size: 40 %>
+        </div>
+        <div class="form-row clearfix">
+          <%= f.label 'Robot Description*' %>
+          <%= f.text_area :description, placeholder: 'Tell us about your robot here...' %>
+        </div>
+        <%= f.button :submit, class: 'btn btn-submit' %>
+      <% end %>
+    </div>
+  </div>
+</section>
