@@ -16,4 +16,4 @@ test:
 
 production:
   <<: *defaults
-  app_name: "Instuctobots"
+  app_name: "Instructabots"
