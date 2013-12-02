@@ -27,4 +27,11 @@ describe Robot do
       expect(robot).to be_valid
     end
   end
+  describe "#creator_name" do
+    it "returns the name of the user who created the Robot" do
+      user = create(:user, name: "Lady Zahra")
+      robot = build(:robot, user: user)
+      expect(robot.creator_name).to eq "Lady Zahra"
+    end
+  end
 end
