@@ -23,7 +23,7 @@ class RobotsController < ApplicationController
 
    respond_to do |format|
      if @robot.save
-       format.html { redirect_to robot_path(@robot_path)}
+       format.html { redirect_to robot_path(@robot)}
      else
        format.html { render action: "new" }
      end
@@ -49,7 +49,7 @@ class RobotsController < ApplicationController
 
   private
   def robot_params
-    params.require(:robot).permit(:name, :description, :avatar)
+    params.require(:robot).permit(:name, :description, :avatar, :code_url, :video_url)
   end
 
 end

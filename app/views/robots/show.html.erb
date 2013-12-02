@@ -8,11 +8,15 @@
   <div class="container">
     <article class="case-study">
       <div class="case-study-copy">
-        <h1 class="case-study-title">ZahraBot</h1>
-        <p><strong>by Lady Zahra</strong></p>
-        <p>Throughout my lifetime I've left pieces of my heart here and there. And now, there's almost barely enough to stay alive. But I force a smile, knowing that my ambition far exceeded my talent.</p>
-        <%= link_to 'Code', "#", class: "btn" %>
-        <%= link_to 'Video', "#", class: "btn btn-gray" %>
+        <h1 class="case-study-title"><%= @robot.name %> </h1>
+        <p><strong>by <%= @robot.creator_name %> </strong></p>
+        <p> <%= @robot.description %> </p>
+        <% if @robot.code_url.present? %>
+          <%= link_to 'Code', @robot.code_url, class: "btn", target: "_blank" %>
+        <% end %>
+        <% if @robot.video_url.present? %>
+          <%= link_to 'Video', @robot.video_url, class: "btn btn-gray", target: "_blank" %>
+        <% end %>
       </div>
     </article>
     <article class="case-parts">

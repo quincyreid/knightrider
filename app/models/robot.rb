@@ -3,4 +3,8 @@ class Robot < ActiveRecord::Base
   has_attached_file :avatar, styles: { large: "570x306" }, default_url: "knightrider-logo.png"
 
   validates :name, :description, presence: true
+
+  def creator_name
+    user.name
+  end
 end
