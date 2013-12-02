@@ -6,11 +6,11 @@
 
 <section class="section clearfix">
   <div class="container">
-    <article class="case-study">
+    <article class="case-study clearfix">
       <div class="case-study-copy">
         <h1 class="case-study-title"><%= @robot.name %> </h1>
         <p><strong>by <%= @robot.creator_name %> </strong></p>
-        <p> <%= @robot.description %> </p>
+        <p class="feature-text"><%= @robot.description %> </p>
         <% if @robot.code_url.present? %>
           <%= link_to 'Code', @robot.code_url, class: "btn", target: "_blank" %>
         <% end %>
@@ -18,13 +18,6 @@
           <%= link_to 'Video', @robot.video_url, class: "btn btn-gray", target: "_blank" %>
         <% end %>
       </div>
-    </article>
-    <article class="case-parts">
-
-    </article>
-    <article class="case-parts">
-    </article>
-    <article class="case-parts">
     </article>
   </div>
 </section>
