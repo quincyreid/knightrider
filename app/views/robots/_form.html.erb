@@ -9,26 +9,26 @@
       <%= form_for @robot do |f| %>
         <div class="form-row">
           <%= f.label "Robot Name*" %>
-          <%= f.text_field :name, placeholder: 'Have you named your robot?', size: 40 %>
+          <%= f.text_field :name, placeholder: 'Have you named your robot?', size: 40, class: 'robot-input' %>
         </div>
         <div class="form-row clearfix">
           <%= f.label 'Robot Description*' %>
-          <%= f.text_area :description, placeholder: 'Tell us about your robot here...' %>
+          <%= f.text_area :description, placeholder: 'Tell us about your robot here...', class: 'robot-input robot-description' %>
         </div>
 
         <div class="form-row clearfix">
-          <%= f.label 'Robot Avatar' %>
-          <%= f.file_field :avatar %>
+          <%= f.label 'Robot Avatar*' %>
+          <%= f.file_field :avatar, class: 'robot-image' %>
         </div>
 
         <div class="form-row clearfix">
-          <%= f.label 'Source Code' %>
-          <%= f.text_field :code_url, placeholder: 'Link to your source code ', size: 40 %>
+          <%= f.label 'Source Code*' %>
+          <%= f.text_field :code_url, placeholder: 'Link to your source code ', size: 40, class: 'robot-input' %>
         </div>
 
         <div class="form-row clearfix">
-          <%= f.label 'Youtube Video' %>
-          <%= f.text_field :video_url, placeholder: 'Link to your video', size: 40 %>
+          <%= f.label 'Youtube Video*' %>
+          <%= f.text_field :video_url, placeholder: 'Link to your video', size: 40, class: 'robot-input' %>
         </div>
 
         <%= f.button :submit, class: 'btn btn-submit' %>
