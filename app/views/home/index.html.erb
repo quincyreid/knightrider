@@ -1,3 +1,6 @@
+<% content_for :js do %>
+  <script>mixpanel.track('Viewed Homepage');</script>
+<% end %>
 <section class="hero-image-text cb">
   <div class="top-background">
     <%= image_tag asset_path("knightrider-logo.png"), class: 'knightrider-logo' %>
