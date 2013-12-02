@@ -22,8 +22,13 @@ describe Robot do
       expect(robot).to be_valid
     end
 
-    it "does not require a robot have an link to the code" do
+    it "does not require a robot have a link to the code" do
       robot = build(:robot, code_url: nil)
+      expect(robot).to be_valid
+    end
+
+    it "does not require a robot have a video url" do
+      robot = build(:robot, video_url: nil)
       expect(robot).to be_valid
     end
   end

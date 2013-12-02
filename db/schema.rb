@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201205736) do
+ActiveRecord::Schema.define(version: 20131202022338) do
 
   create_table "robots", force: true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20131201205736) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "code_url"
+    t.string   "video_url"
   end
 
   create_table "users", force: true do |t|
