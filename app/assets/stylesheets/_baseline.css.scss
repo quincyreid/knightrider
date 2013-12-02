@@ -1,3 +1,8 @@
+@import 'breakpoint';
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+
 /*** Breakpoints ***/
 $break-tablet: 551px 959px;
 $break-tablet-smaller: 551px 765px;

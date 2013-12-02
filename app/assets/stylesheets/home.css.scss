@@ -15,16 +15,26 @@ header {
   width: 100%;
   background-color: $yellow;
   height: 300px;
+  @include breakpoint($break-mobile) {
+    height: 135px;
+  }
 }
 
 .bottom-background {
   width: 100%;
   background-color: $blue;
   height: 180px;
+  @include breakpoint($break-mobile) {
+    height: 110px;
+  }
 }
 
 .knightrider-logo {
   margin-top :60px;
+  @include breakpoint($break-mobile) {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 .feature {
@@ -33,11 +43,14 @@ header {
   display: block;
   float: left;
   width: 31.33%;
-}
-
-.feature-img {
-  max-width: 100%;
-  margin-bottom: 1.25em;
+  @include breakpoint($break-mobile) {
+    width: 100%;
+  }
+  .featured-image {
+    @include breakpoint($break-tablet-and-below) {
+      width: 70%;
+    }
+  }
 }
 
 .feature-title {
@@ -58,6 +71,9 @@ header {
   text-transform: uppercase;
   color: $yellow;
   margin-top: -15px;
+  @include breakpoint($break-mobile) {
+    font-size: 35px;
+  }
 }
 
 .second-headline {
@@ -65,4 +81,7 @@ header {
   color: white;
   margin-top: -25px;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
+   @include breakpoint($break-mobile) {
+    font-size: 25px;
+  }
 }
