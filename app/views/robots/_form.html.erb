@@ -21,6 +21,11 @@
           <%= f.file_field :avatar %>
         </div>
 
+         <div class="form-row clearfix">
+          <%= f.label 'URL' %>
+          <%= f.text_field :code_url, placeholder: 'Link to code url', size: 40 %>
+        </div>
+
         <%= f.button :submit, class: 'btn btn-submit' %>
       <% end %>
     </div>
