@@ -1,0 +1,54 @@
+@import "baseline";
+
+.btn {
+  font-size: 0.88889rem;
+  height: 3rem;
+  line-height: 3rem;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0px 2em;
+  border: 2px solid $dark-gray;
+  color: $dark-gray;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: $dark-gray;
+    color: white;
+    border: 2px solid $dark-gray;
+  }
+}
+
+.sub-btn {
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+  background-image: image-url("GitHub-Mark-120px-plus.png");
+  background-size: 25px;
+  padding-left: 60px;
+  &:hover {
+    background-image: image-url("GitHub-Mark-120px-plus-hover.png")
+  }
+}
+
+.btn-gray {
+  background-color: $blue;
+  border: 2px solid $blue;
+  color: white;
+}
+
+.btn-submit {
+  background: $dark-gray;
+  border-color: $dark-gray;
+  color: white;
+  float: right;
+  &:hover {
+    color: $dark-gray;
+    background-color: white;
+  }
+}
