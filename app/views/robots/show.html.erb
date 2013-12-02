@@ -14,7 +14,9 @@
         <% if @robot.code_url.present? %>
           <%= link_to 'Code', @robot.code_url, class: "btn", target: "_blank" %>
         <% end %>
-        <%= link_to 'Video', "#", class: "btn btn-gray" %>
+        <% if @robot.video_url.present? %>
+          <%= link_to 'Video', @robot.video_url, class: "btn btn-gray", target: "_blank" %>
+        <% end %>
       </div>
     </article>
     <article class="case-parts">

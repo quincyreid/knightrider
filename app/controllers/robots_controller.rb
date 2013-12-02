@@ -49,7 +49,7 @@ class RobotsController < ApplicationController
 
   private
   def robot_params
-    params.require(:robot).permit(:name, :description, :avatar, :code_url)
+    params.require(:robot).permit(:name, :description, :avatar, :code_url, :video_url)
   end
 
 end
