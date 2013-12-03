@@ -21,6 +21,7 @@ gem 'omniauth-github'
 gem 'settingslogic'
 gem 'simple_form'
 gem 'paperclip', '~> 3.0'
+gem 'rails_autolink'
 
 group :development do
   gem 'growl'

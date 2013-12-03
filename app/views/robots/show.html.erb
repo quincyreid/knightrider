@@ -16,7 +16,7 @@
     </div>
     <div class="robot-about">
       <div class="text">
-        <p class="feature-text"><%= @robot.description %> </p>
+        <p class="feature-text"><%= robot_format(@robot.description) %> </p>
         <% if @robot.code_url.present? %>
           <%= link_to 'Code', @robot.code_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
