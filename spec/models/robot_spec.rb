@@ -17,9 +17,9 @@ describe Robot do
       expect(robot).to_not be_valid
     end
 
-    it "does not require a robot have an avatar" do
+    it "does require a robot have an avatar" do
       robot = build(:robot, avatar: nil)
-      expect(robot).to be_valid
+      expect(robot).to_not be_valid
     end
 
     it "does require a robot have a link to the code" do
