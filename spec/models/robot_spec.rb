@@ -31,6 +31,16 @@ describe Robot do
       robot = build(:robot, video_url: nil)
       expect(robot).to_not be_valid
     end
+
+    it "validates the format of the code url" do
+      robot = build(:robot, code_url: "code.google.com")
+      expect(robot).to_not be_valid
+    end
+
+    it "validates the format of the video url" do
+      robot = build(:robot, video_url: "youtu.be/nlcIKh6sBtc")
+      expect(robot).to_not be_valid
+    end
   end
   describe "#creator_name" do
     it "returns the name of the user who created the Robot" do
