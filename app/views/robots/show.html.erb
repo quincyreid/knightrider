@@ -1,23 +1,34 @@
-<section class="hero-case-study cb">
-  <div class="hero-case-study-contained">
-    <%= image_tag asset_path("knightrider-logo.png"), class: 'hero-case-study-image' %>
-  </div>
-</section>
-
-<section class="section clearfix">
-  <div class="container">
-    <article class="case-study clearfix">
-      <div class="case-study-copy">
-        <h1 class="case-study-title"><%= @robot.name %> </h1>
+<section class="section robots-case-study">
+  <div class="case-study-author">
+    <div class="case-study-container">
+      <h1 class="case-study-title"><%= @robot.name %> </h1>
         <p><strong>by <%= @robot.creator_name %> </strong></p>
+    </div>
+  </div>
+
+  <div class="case-study-about-robot clearfix">
+    <div class="arrows">
+      <%= image_tag 'arrow-yellow.png', style: 'width: 35px; height: 12px;', class: 'up' %>
+      <%= image_tag 'arrow-blue.png', style: 'width: 35px; height: 12px;', class: 'down' %>
+    </div>
+    <div class="case-study-robot-image" style="overflow: hidden; position: relative;">
+      <%= image_tag @robot.avatar %>
+    </div>
+    <div class="robot-about">
+      <div class="text">
         <p class="feature-text"><%= @robot.description %> </p>
         <% if @robot.code_url.present? %>
-          <%= link_to 'Code', @robot.code_url, class: "btn", target: "_blank" %>
+          <%= link_to 'Code', @robot.code_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
         <% if @robot.video_url.present? %>
-          <%= link_to 'Video', @robot.video_url, class: "btn btn-gray", target: "_blank" %>
+          <%= link_to 'Video', @robot.video_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
       </div>
-    </article>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid clearfix">
+    </div>
   </div>
 </section>

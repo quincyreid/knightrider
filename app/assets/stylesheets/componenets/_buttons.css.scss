@@ -18,6 +18,9 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
+  @include breakpoint($break-mobile) {
+    margin: 0;
+  }
   &:hover {
     background-color: $dark-gray;
     color: white;
@@ -36,10 +39,11 @@
   }
 }
 
-.btn-gray {
-  background-color: $blue;
-  border: 2px solid $blue;
-  color: white;
+.btn-white {
+  background-color: white;
+  color: $dark-gray;
+  border: 2px solid white;
+  margin-left: 0;
 }
 
 .btn-submit {

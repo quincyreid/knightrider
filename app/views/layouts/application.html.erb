@@ -10,7 +10,9 @@
 
 <header class="page-head clearfix">
   <div class="container">
-    <%= image_tag asset_path("knightrider-half.png"), class: 'left' %>
+    <div class="nav-logo">
+      <%= link_to image_tag('knightrider-half.png'), root_path %>
+    </div>
     <nav class="page-nav right">
       <ul>
         <li class="menu-item"><%= link_to "About", "#about" %></li>
@@ -26,7 +28,7 @@
       <% end %>
 
       <% if user_signed_in? %>
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn submit-robot' %>
+        <%= link_to 'Submit A Robot', destroy_user_session_path, method: :delete, class: 'btn submit-robot' %>
       <% end %>
     </nav>
   </div>
@@ -36,11 +38,11 @@
 <footer class="page-footer">
   <div class="copyright">
     <p class="smallprint">&copy; 2013 Copyright Instructobots <span class="space">::</span>  Made with <span class="heart">&#x2665;</span> in NYC by
-    <%= link_to "Francis Gulotta", "#", class: "footer-link" %>
-    &amp;&amp;
-    <%= link_to "Rushaine McBean", "#", class: "footer-link" %>
-    &amp;&amp;
-    <%= link_to "Zahra Jabini", "#", class: "footer-link" %>
+    <%= link_to "Francis Gulotta", "https://twitter.com/reconbot", class: "footer-link", target: "_blank" %>
+    &&
+    <%= link_to "Rushaine McBean", "https://twitter.com/copasetickid", class: "footer-link", target: "_blank" %>
+    &&
+    <%= link_to "Zahra Jabini", "https://twitter.com/zeejab", class: "footer-link", target: "_blank" %>
   </div>
 </footer>
 

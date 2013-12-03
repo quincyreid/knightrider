@@ -55,11 +55,14 @@ textarea {
 
 .section {
   padding: 60px 0;
-  padding: 0.66667rem 0;
+  padding: 1.66667rem 0;
 }
 
 .section-head {
   padding: 0 0 30px 0;
+  @include breakpoint($break-mobile) {
+    padding: 0;
+  }
 }
 
 .section-head-title {
@@ -81,14 +84,25 @@ form {
   float: left;
   margin: 0 3% 3% 9%;
   width: 48.54651%;
+  @include breakpoint($break-mobile) {
+    width: 100%;
+    margin: 0;
+  }
   label {
     display: block;
     float: left;
     margin-right: 6%;
     width: 30%;
     line-height: 60px;
+    @include breakpoint($break-mobile) {
+      width: 100%;
+    }
   }
   .form-row { margin: 20px 0; }
+}
+
+.grid {
+  padding: 30px 0;
 }
 
 .heart {

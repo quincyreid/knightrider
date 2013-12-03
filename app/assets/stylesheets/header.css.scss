@@ -2,17 +2,58 @@
 
 .page-head {
   margin: 1.11111rem 0px;
+  .container {
+  overflow: hidden;
+  }
+}
+
+.nav-logo {
+  margin-left: -30px;
+  padding-left: 30px;
+  width: 110px;
+  height: 66px;
+  float: left;
+  position: relative;
+  z-index: 2;
+  @include breakpoint($break-mobile) {
+    display: none;
+  }
+  img {
+    width: 80px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 30px;
+    @include breakpoint($break-mobile) {
+      display: inline-block;
+      margin: 0px auto;
+      left: 0px;
+    }
+  }
 }
 
 .page-nav {
   margin-top: 0.72222rem;
   height: 3rem;
   font-weight: 700;
+  @include breakpoint($break-mobile) {
+    float: none;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
   ul {
     margin-right: 1.11111rem;
     line-height: 3rem;
     float: left;
     text-transform: uppercase;
+    @include breakpoint($break-mobile) {
+      float: none;
+      margin: auto;
+    }
   }
   .menu-item {
     padding: 0px 0.66667rem;

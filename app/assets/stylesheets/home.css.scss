@@ -1,9 +1,5 @@
 @import "baseline";
 
-header {
-  img { width: 70px; }
-}
-
 .hero-image-text {
   width: 100%;
   text-align: center;
@@ -16,7 +12,8 @@ header {
   background-color: $yellow;
   height: 300px;
   @include breakpoint($break-mobile) {
-    height: 135px;
+    overflow: auto;
+    height: auto;
   }
 }
 
@@ -25,7 +22,7 @@ header {
   background-color: $blue;
   height: 180px;
   @include breakpoint($break-mobile) {
-    height: 110px;
+    display: none;
   }
 }
 
@@ -37,51 +34,91 @@ header {
   }
 }
 
-.feature {
+.value-prop {
+  height: auto;
+  padding: 40px;
   text-align: center;
-  margin: 4% 1%;
-  display: block;
-  float: left;
-  width: 31.33%;
+  @include breakpoint($break-tablet-and-below) {
+    width: 100%;
+    margin-top: 40px auto 50px auto;
+    padding:40px;
+    @include box-sizing(border-box);
+  }
+  @include breakpoint($break-mobile) {
+    padding: 40px 20px;
+  }
+}
+
+.feature {
+  width: 28%;
+  display: inline-block;
+  margin: 0 2.5%;
+  vertical-align: top;
+  @include box-sizing(border-box);
+  @include breakpoint($break-tablet) {
+    width: 70%;
+    display: block;
+    margin: 0 auto 50px auto;
+  }
   @include breakpoint($break-mobile) {
     width: 100%;
-  }
-  .featured-image {
-    @include breakpoint($break-tablet-and-below) {
-      width: 70%;
-    }
+    margin: 0 0 50px 0;
   }
 }
 
 .feature-title {
-  margin: 4% 0;
+  line-height: 1.1em;
+  font-weight: bold;
   font-family: proxima-nova,Helvetica,Arial,sans-serif;
   text-transform: uppercase;
   font-size: 1.44444rem;
 }
 
 .feature-text {
+  font-size: 15px;
+  margin: 15px 0 20px 0;
   color: $light-gray;
   line-height: 1.4;
 }
 
 .headline {
-  text-shadow: 0.04em 0.04em $dark-gray;
+  text-shadow: 0.04em 0.04em $light-gray;
   font-size: 60px;
   text-transform: uppercase;
   color: $yellow;
   margin-top: -15px;
+  font-family: adelle, Georgia, serif;
   @include breakpoint($break-mobile) {
+    color: $blue;
     font-size: 35px;
+    margin-top: -10px;
   }
 }
 
 .second-headline {
-  font-size: 40px;
+  font-size: 22px;
+  text-transform: uppercase;
   color: white;
-  margin-top: -25px;
+  margin-top: -15px;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
    @include breakpoint($break-mobile) {
-    font-size: 25px;
+    font-size: 15px;
+    color: $dark-gray;
+    font-weight: 500;
+
   }
+}
+
+.section-thoughts {
+  background: $light-gray;
+  padding: 2.22222rem 0;
+}
+
+.thought {
+  color: $dark-gray;
+  text-align: center;
+  margin-right: 3%;
+  width: 80%;
+  margin: 0 auto;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
 }
