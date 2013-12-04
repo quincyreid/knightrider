@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  #Overiding devise method :authenticate_user!
+  def authenticate_user!
+    unless user_signed_in?
+      redirect_to user_omniauth_authorize_path(:github)
+    end
+  end
+
 end

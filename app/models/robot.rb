@@ -12,4 +12,5 @@ class Robot < ActiveRecord::Base
   def creator_name
     user.name
   end
+
 end

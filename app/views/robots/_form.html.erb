@@ -6,7 +6,7 @@
     </div>
     <div class="form-section clearfix">
       <div class="section-number">Aimless extension of knowledge, however, which is what I think you really mean by the term curiosity, is merely inefficiency. I am designed to avoid inefficiency.</div>
-    <%= simple_form_for @robot do |f| %>
+    <%= form_for @robot do |f| %>
       <% if @robot.errors.any? %>
         <div id="robot-errors_">
           <h2><%= pluralize(@robot.errors.count, "error") %> prohibited the creation of your robot:</h2>
@@ -19,26 +19,41 @@
       <% end %>
         <div class="form-row">
           <%= f.label "Robot Name*" %>
-          <%= f.text_field :name, placeholder: 'Have you named your robot?', size: 40, class: 'robot-input' %>
+          <%= f.text_field :name, placeholder: 'Have you named your robot?', size: 40, class: 'robot-input', required: true %>
         </div>
         <div class="form-row clearfix">
           <%= f.label 'Robot Description*' %>
-          <%= f.text_area :description, placeholder: 'Tell us about your robot here...', class: 'robot-input robot-description' %>
+          <%= f.text_area :description, placeholder: 'Tell us about your robot here...', class: 'robot-input robot-description' , required: true %>
         </div>
 
         <div class="form-row clearfix">
           <%= f.label 'Robot Avatar*' %>
-          <%= f.file_field :avatar, class: 'robot-image' %>
+          <%= f.file_field :avatar, class: 'robot-image' , required: true %>
         </div>
 
         <div class="form-row clearfix">
           <%= f.label 'Source Code*' %>
-          <%= f.text_field :code_url, placeholder: 'Link to your source code ', size: 40, class: 'robot-input' %>
+          <%= f.text_field :code_url, placeholder: 'Link to your source code ', size: 40, class: 'robot-input' , required: true %>
         </div>
 
         <div class="form-row clearfix">
           <%= f.label 'Youtube Video*' %>
-          <%= f.text_field :video_url, placeholder: 'Link to your video', size: 40, class: 'robot-input' %>
+          <%= f.text_field :video_url, placeholder: 'Link to your video', size: 40, class: 'robot-input', required: true  %>
+        </div>
+
+        <div class="form-row clearfix">
+          <%= f.label 'Cost' %>
+          <%= f.text_field :cost_to_build , placeholder: 'Enter amount', class: 'robot-input' %>
+        </div>
+
+        <div class="form-row clearfix">
+          <%= f.label 'Hours to Build' %>
+          <%= f.text_field :time_to_build, placeholder: 'How long did it take you to build it?' %>
+        </div>
+
+         <div class="form-row clearfix">
+          <%= f.label 'Programming Language' %>
+          <%= f.text_field :programming_language, placeholder: 'What was it built in?', size: 40, class: 'robot-input' %>
         </div>
 
         <%= f.button :submit, class: 'btn btn-submit' %>
