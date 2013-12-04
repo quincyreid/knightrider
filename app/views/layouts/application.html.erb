@@ -15,8 +15,8 @@
     </div>
     <nav class="page-nav right">
       <ul>
-        <li class="menu-item"><%= link_to "About", "#about" %></li>
-        <li class="menu-item"><%= link_to "Featured", "#featured" %></li>
+        <li class="menu-item"><%= link_to "About", "/#about" %></li>
+        <li class="menu-item"><%= link_to "Featured", "/#featured" %></li>
         <% if user_signed_in? %>
           <li class="menu-item"><%= link_to "Your Robot",
           robot_path(current_user.robots.first) %></li>
