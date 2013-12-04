@@ -41,7 +41,23 @@ describe Robot do
       robot = build(:robot, video_url: "youtu.be/nlcIKh6sBtc")
       expect(robot).to_not be_valid
     end
+
+    it "does not require the field cost_to_build" do
+      robot = build(:robot, cost_to_build: nil)
+      expect(robot).to be_valid
+    end
+
+     it "does not require the field time_to_build" do
+      robot = build(:robot, time_to_build: nil)
+      expect(robot).to be_valid
+    end
+
+     it "does not require the programming_language field " do
+      robot = build(:robot, programming_language: nil)
+      expect(robot).to be_valid
+    end
   end
+
   describe "#creator_name" do
     it "returns the name of the user who created the Robot" do
       user = create(:user, name: "Lady Zahra")
