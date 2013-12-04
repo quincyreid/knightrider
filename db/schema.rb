@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20131203214932) do
     t.datetime "avatar_updated_at"
     t.string   "code_url"
     t.string   "video_url"
-    t.float    "cost_to_build"
-    t.integer  "time_to_build"
+    t.text     "cost_to_build"
+    t.text     "time_to_build"
     t.string   "programming_language"
   end
 
