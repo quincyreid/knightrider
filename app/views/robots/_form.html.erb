@@ -46,18 +46,15 @@
           <%= f.text_field :cost_to_build , placeholder: 'Enter amount', class: 'robot-input' %>
         </div>
 
-
         <div class="form-row clearfix">
           <%= f.label 'Hours to Build' %>
-          <%= f.select :time_to_build, options_for_select((1..10)) %>
+          <%= f.text_field :time_to_build, placeholder: 'How long did it take you to build it?' %>
         </div>
 
          <div class="form-row clearfix">
           <%= f.label 'Programming Language' %>
           <%= f.text_field :programming_language, placeholder: 'What was it built in?', size: 40, class: 'robot-input' %>
         </div>
-
-
 
         <%= f.button :submit, class: 'btn btn-submit' %>
       <% end %>

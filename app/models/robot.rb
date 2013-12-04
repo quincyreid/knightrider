@@ -8,8 +8,6 @@ class Robot < ActiveRecord::Base
   validates :name, :description, :code_url, :video_url, presence: true
   validates_format_of :code_url, with: URI.regexp(["http", "https"])
   validates_format_of :video_url, with: URI.regexp(["http", "https"])
-  validates_numericality_of :cost_to_build, allow_blank: true
-  validates_numericality_of :time_to_build, allow_blank: true
 
   def creator_name
     user.name
