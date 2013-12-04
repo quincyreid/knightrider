@@ -17,19 +17,29 @@ describe Robot do
       expect(robot).to_not be_valid
     end
 
-    it "does not require a robot have an avatar" do
+    it "does require a robot have an avatar" do
       robot = build(:robot, avatar: nil)
-      expect(robot).to be_valid
+      expect(robot).to_not be_valid
     end
 
-    it "does not require a robot have a link to the code" do
+    it "does require a robot have a link to the code" do
       robot = build(:robot, code_url: nil)
-      expect(robot).to be_valid
+      expect(robot).to_not be_valid
     end
 
-    it "does not require a robot have a video url" do
+    it "does require a robot have a video url" do
       robot = build(:robot, video_url: nil)
-      expect(robot).to be_valid
+      expect(robot).to_not be_valid
+    end
+
+    it "validates the format of the code url" do
+      robot = build(:robot, code_url: "code.google.com")
+      expect(robot).to_not be_valid
+    end
+
+    it "validates the format of the video url" do
+      robot = build(:robot, video_url: "youtu.be/nlcIKh6sBtc")
+      expect(robot).to_not be_valid
     end
   end
   describe "#creator_name" do
