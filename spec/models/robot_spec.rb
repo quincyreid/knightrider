@@ -27,9 +27,9 @@ describe Robot do
       expect(robot).to_not be_valid
     end
 
-    it "does require a robot have a video url" do
+    it "does not require a robot have a video url" do
       robot = build(:robot, video_url: nil)
-      expect(robot).to_not be_valid
+      expect(robot).to be_valid
     end
 
     it "validates the format of the code url" do
@@ -37,10 +37,6 @@ describe Robot do
       expect(robot).to_not be_valid
     end
 
-    it "validates the format of the video url" do
-      robot = build(:robot, video_url: "youtu.be/nlcIKh6sBtc")
-      expect(robot).to_not be_valid
-    end
 
     it "does not require the field cost_to_build" do
       robot = build(:robot, cost_to_build: nil)
