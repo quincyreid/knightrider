@@ -6,7 +6,7 @@ class RobotsController < ApplicationController
   end
 
   def show
-    @robot = Robot.find(params[:id])
+    @robot = Robot.friendly.find(params[:id])
   end
 
   def new
