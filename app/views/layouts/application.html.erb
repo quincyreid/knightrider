@@ -17,21 +17,20 @@
       <ul>
         <li class="menu-item"><%= link_to "About", "/#about" %></li>
         <li class="menu-item"><%= link_to "Featured", "/#featured" %></li>
-        <% if user_signed_in? %>
-        <% if current_user.robots.present? %>
+        <% if user_signed_in? && current_user.robots.present? %>
           <li class="menu-item"><%= link_to "Your Robot",
           robot_path(current_user.robots.first) %></li>
         <% end %>
-          <li class="menu-item"><%= link_to "Submit Robot", new_robot_path %></li>
+        <% if user_signed_in? %>
+          <li class="menu-item"><%= link_to "log out", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
-      <% unless user_signed_in? %>
+      <% if user_signed_in? %>
+        <%= link_to 'Submit A Robot', new_robot_path, class: 'btn submit-robot' %>
+      <% else %>
         <%= link_to 'Submit A Robot', user_omniauth_authorize_path(:github), class: 'btn submit-robot sub-btn' %>
       <% end %>
 
-      <% if user_signed_in? %>
-        <%= link_to 'Submit A Robot', destroy_user_session_path, method: :delete, class: 'btn submit-robot' %>
-      <% end %>
     </nav>
   </div>
 </header>
@@ -41,9 +40,9 @@
   <div class="copyright">
     <p class="smallprint">&copy; 2013 Copyright Instructobots <span class="space">::</span>  Made with <span class="heart">&#x2665;</span> in NYC by
     <%= link_to "Francis Gulotta", "https://twitter.com/reconbot", class: "footer-link", target: "_blank" %>
-    &&
+    &amp;&amp;
     <%= link_to "Rushaine McBean", "https://twitter.com/copasetickid", class: "footer-link", target: "_blank" %>
-    &&
+    &amp;&amp;
     <%= link_to "Zahra Jabini", "https://twitter.com/zeejab", class: "footer-link", target: "_blank" %>
   </div>
 </footer>
