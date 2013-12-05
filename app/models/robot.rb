@@ -2,7 +2,7 @@ class Robot < ActiveRecord::Base
   extend FriendlyId
 
   belongs_to :user
-  has_attached_file :avatar, styles: { large: "570x306" }, default_url: "knightrider-logo.png"
+  has_attached_file :avatar, styles: { large: "680x400" }, default_url: "knightrider-logo.png"
 
   validates :avatar, attachment_presence: true
   validates_with AttachmentPresenceValidator, attributes: :avatar

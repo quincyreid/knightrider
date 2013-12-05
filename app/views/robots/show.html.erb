@@ -12,7 +12,7 @@
       <%= image_tag 'arrow-blue.png', style: 'width: 35px; height: 12px;', class: 'down' %>
     </div>
     <div class="case-study-robot-image" style="overflow: hidden; position: relative;">
-      <%= image_tag @robot.avatar %>
+      <%= image_tag @robot.avatar.url(:large) %>
     </div>
     <div class="robot-about">
       <div class="text">
@@ -23,6 +23,8 @@
         <% if @robot.video_url.present? %>
           <%= link_to 'Video', @robot.video_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
+
+
       </div>
     </div>
   </div>
