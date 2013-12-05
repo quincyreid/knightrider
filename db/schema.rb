@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203214932) do
+ActiveRecord::Schema.define(version: 20131204200018) do
 
   create_table "robots", force: true do |t|
     t.string   "name"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20131203214932) do
     t.text     "cost_to_build"
     t.text     "time_to_build"
     t.string   "programming_language"
+    t.string   "slug"
   end
+
+  add_index "robots", ["slug"], name: "index_robots_on_slug", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
