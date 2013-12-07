@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :user do
-    email 'marshall@example.com'
+    sequence(:email) { |n| "marshall-#{n}@example.com" }
     password 'password!'
     password_confirmation 'password!'
     provider "github"
     uid "123456"
-    name "Marshall Mathers"
+    name {generate(:random_name)}
   end
 end
