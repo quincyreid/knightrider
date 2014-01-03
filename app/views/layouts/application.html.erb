@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
+  <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title><%= AppConfig.app_name %></title>
   <%= stylesheet_link_tag    "application", media: "all" %>
@@ -19,6 +20,7 @@
       <ul>
         <li class="menu-item"><%= link_to "About", "/#about" %></li>
         <li class="menu-item"><%= link_to "Featured", "/#featured" %></li>
+        <li class="menu-item"><%= link_to "All Robots", "/robots/" %></li>
         <% if user_signed_in? && current_user.robots.present? %>
           <li class="menu-item"><%= link_to "Your Robot",
           robot_path(current_user.robots.first) %></li>
