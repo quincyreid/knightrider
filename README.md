@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/wizarddevelopment/knightrider.png?label=ready)](https://waffle.io/wizarddevelopment/knightrider)
 knightrider
 ===========
 
