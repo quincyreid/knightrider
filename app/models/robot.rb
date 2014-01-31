@@ -9,7 +9,7 @@ class Robot < ActiveRecord::Base
 
   validates_attachment :avatar,
     :presence => true,
-    :content_type => { :content_type => ["image/jpg", "image/gif", "image/png", "image/svg+xml"]},
+    :content_type => { :content_type => ["image/jpg", "image/gif", "image/png", "image/jpeg"]},
     :size => { :in => 0..10.megabytes }
 
   validates :name, :description, :code_url, presence: true
