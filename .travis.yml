@@ -1,0 +1,8 @@
+language: ruby
+cache: bundler
+before_install: "echo 'Knight Rider, a shadowy flight into the dangerous world of a man who does not exist.'"
+before_script:
+  - psql -c 'create database knightrider_test;' -U postgres
+  - cp config/database.test.yml config/database.yml
+rvm:
+  - 2.0.0
