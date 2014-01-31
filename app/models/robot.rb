@@ -3,12 +3,14 @@ class Robot < ActiveRecord::Base
 
   belongs_to :user
   has_attached_file :avatar, styles: {
-    large: "680x400",
-    small: "422x300#"
+    large: ["680x400", :jpeg],
+    small: ["422x300#", :jpeg]
   }, default_url: "knightrider-logo.png"
 
-  validates :avatar, attachment_presence: true
-  validates_with AttachmentPresenceValidator, attributes: :avatar
+  validates_attachment :avatar,
+    :presence => true,
+    :content_type => { :content_type => ["image/jpg", "image/gif", "image/png", "image/svg+xml"]},
+    :size => { :in => 0..10.megabytes }
 
   validates :name, :description, :code_url, presence: true
   validates_format_of :code_url, with: URI.regexp(["http", "https"])

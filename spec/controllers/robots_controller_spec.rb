@@ -78,6 +78,7 @@ describe RobotsController do
 
       it "send the user back to show page" do
         put :update, id: robot.id, robot: { name: "Ryan Atwood" }
+        robot.reload
         expect(response).to redirect_to robot_path(robot)
       end
 
