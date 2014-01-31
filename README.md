@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/wizarddevelopment/knightrider.png?label=ready)](https://waffle.io/wizarddevelopment/knightrider) [![Build Status](https://travis-ci.org/wizarddevelopment/knightrider.png)](https://travis-ci.org/wizarddevelopment/knightrider)
+[![Stories in Ready](https://badge.waffle.io/wizarddevelopment/knightrider.png?label=ready&v=2)](https://waffle.io/wizarddevelopment/knightrider) [![Build Status](https://travis-ci.org/wizarddevelopment/knightrider.png)](https://travis-ci.org/wizarddevelopment/knightrider)
 
 knightrider
 ===========
