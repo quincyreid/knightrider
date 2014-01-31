@@ -1,10 +1,10 @@
-<article class="robots robots-with-link">
-  <%= image_tag robot.avatar %>
-  <div class="robots-overlay-effect display-none ">
-    <div class="effect-contents">
+<article class="robot-box">
+  <%= image_tag robot.avatar(:small) %>
+  <div class="robots-overlay-effect">
+    <%= link_to robot do %>
       <div class="effect-contents-inner">
-        <h3><%= link_to robot.name, robot %></h3>
+        <h2><%= robot.name %></h2>
       </div>
-    </div>
+    <% end %>
   </div>
 </article>
