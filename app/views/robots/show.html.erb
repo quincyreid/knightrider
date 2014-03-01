@@ -21,7 +21,7 @@
           <%= link_to 'Code', @robot.code_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
         <% if @robot.video_url.present? %>
-          <%= link_to 'Video', @robot.video_url, class: "btn btn-white", target: "_blank" %>
+          <%= YouTubeAddy.youtube_embed_url(@robot.video_url,420,315) %>
         <% end %>
 
 
