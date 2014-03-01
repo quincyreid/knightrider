@@ -21,14 +21,13 @@
           <%= link_to 'Code', @robot.code_url, class: "btn btn-white", target: "_blank" %>
         <% end %>
         <% if @robot.video_url.present? %>
-          <%= YouTubeAddy.youtube_embed_url(@robot.video_url,420,315) %>
+          <div class="video">
+            <%=raw YouTubeAddy.youtube_embed_url(@robot.video_url,420,315) %>
+          </div>
         <% end %>
-
-
       </div>
     </div>
   </div>
-
   <div class="container">
     <div class="grid clearfix">
     </div>
