@@ -22,7 +22,7 @@
         <% end %>
         <% if @robot.video_url.present? %>
           <div class="video">
-            <%=raw YouTubeAddy.youtube_embed_url(@robot.video_url,420,315) %>
+            <%= YouTubeAddy.youtube_embed_url(@robot.video_url,420,315).html_safe %>
           </div>
         <% end %>
       </div>
