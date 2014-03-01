@@ -24,6 +24,7 @@ gem 'paperclip', '~> 3.0'
 gem 'rails_autolink'
 gem 'friendly_id', '~> 5.0.0'
 gem "aws-sdk", "~> 1.29.0"
+gem 'youtube_addy'
 
 group :development do
   gem 'growl'
